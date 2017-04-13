@@ -103,7 +103,7 @@ var getMoneyM = function(pl) {
 }
 var taxPayer = function() {
     round += 1;
-    if (round === 6) {
+    if (round == 6) {
         confirm("Tax day, everyone loses 10% of their money.");
         x = 6;
         while (x > -1) {
@@ -117,32 +117,32 @@ var taxPayer = function() {
         confirm("There are " + left + " days till taxday");
     }
 }
-var cWinner = function(round) {
+var cWinner = function(roundi) {
     for (var i = 0; i < playerList.length; i++) {
         if (playerList[i].money >= 500000) {
             winnerList.push(playerList[i]);
         }
     }
-    if (winnerList.length === 1) {
+    if (winnerList.length == 1) {
         winner1 = winnerList[0];
-        round = function() {
+        roundi = function() {
             confirm(winner1.name + " won with " + winner1.money);
         }
-    } else if (winnerList.length === 2) {
+    } else if (winnerList.length == 2) {
         winner1 = winnerList[0];
         winner2 = winnerList[1];
-        round = function() {
+        roundi = function() {
             confirm(winner1.name + " and " + winner2.name + " both won with over 500,000");
         }
-    } else if (winnerList.length === 3) {
+    } else if (winnerList.length == 3) {
         winner1 = winnerList[0];
         winner2 = winnerList[1];
         winner3 = winnerList[2];
-        round = function() {
+        roundi = function() {
             confirm(winner1.name + ", " + winner2.name + ", and " + winner3.name + " all won with over 500,000");
         }
-    } else if (winnerList.length === 4) {
-        round = function() {
+    } else if (winnerList.length == 4) {
+        roundi = function() {
             confirm("Everybody won with over 500,000");
         }
     }
