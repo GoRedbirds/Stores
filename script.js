@@ -91,7 +91,7 @@ var buyWorkers = function(ai) {
 }
 var getMoneyW = function(ply) {
     value = ply.workers * 5 + 5;
-    ply.money += value * (rollDice()/2);
+    ply.money += value * (rollDice());
 }
 var getMoneyM = function(pl) {
     getMoneyW(pl);
